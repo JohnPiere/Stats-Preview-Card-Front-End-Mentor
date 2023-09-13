@@ -1,0 +1,130 @@
+/* ===== Styles by JohnPiere ===== */
+
+:root {
+  --clr-primary-dark-blue: hsl(233, 47%, 7%);
+  --clr-primary-des-blue: hsl(244, 38%, 16%);
+  --clr-primary-violet: hsl(277, 64%, 61%);
+
+  --clr-neutral-white: hsl(0, 0%, 100%);
+  --clr-neutral-transp-white-p: hsla(0, 0%, 100%, 0.75);
+  --clr-neutral-transp-white-h: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+  background-color: var(--clr-primary-dark-blue);
+  width: 100%;
+}
+
+/*-- Colors --*/
+
+h1 {
+  color: var(--clr-neutral-white);
+}
+p {
+  color: var(--clr-neutral-transp-white-p);
+}
+.bold {
+  color: var(--clr-primary-violet);
+}
+.stats p {
+  color: var(--clr-neutral-transp-white-p);
+}
+
+/* Styling */
+
+.container {
+  margin: 10% auto; /* Centering the div */
+  justify-content: center; /* Centering the div */
+  width: fit-content; /* Setting the with that it fits the content*/
+  overflow: hidden; /* Content can´t overflow, helps with border-radius*/
+  border-radius: 10px; /* Giving the container a bordered shape */
+}
+.stats,
+.container {
+  display: flex; /* flexbox power */
+}
+.column {
+  max-width: 540px; /* Avoiding that the column cant get mor width than 540px */
+  height: 440px; /* Setting the height of the container to 4ßßpx */
+  background-color: var(--clr-primary-des-blue);
+}
+.intro {
+  padding-bottom: 1rem; /* padding to all sides on the header */
+}
+p {
+  width: 90%; /* width of 90% on the paragraph*/
+  line-height: 1.8; /* Setting the line height for the paragraph */
+}
+.intro {
+  width: 90%; /* Setting the with for the heading */
+  letter-spacing: 2px; /* Setting the space between the letters of the header*/
+}
+.left-column {
+  padding: 4rem; /* adding 4rem of padding to all sites */
+}
+
+.stats {
+  padding-top: 4rem; /* adding 4rem padding to the top */
+  justify-content: space-between; /* Placing the content evenly on the side */
+  width: 90%;
+}
+img {
+  /*Making the img purpleish*/
+  filter: brightness(50%) sepia(50%) hue-rotate(-120deg) saturate(700%)
+    contrast(1);
+  -webkit-transition: 0.5s ease-in-out;
+}
+/*-- Hover Effect --*/
+img:hover {
+  transform: scale(1.1); /* on hover raise the scale */
+  -webkit-transition: 0.5s ease-in-out; /* smooth ease in animation */
+}
+/*-- Media Querries --*/
+
+/*-- When Screen is smaller than 1400px --*/
+@media screen and (max-width: 1400px) {
+  .container,
+  .stats {
+    width: 360px;
+    flex-direction: column;
+  }
+  .stats {
+    padding-top: 2rem;
+  }
+  img {
+    height: 50%;
+    width: 100%;
+  }
+  .container {
+    flex-direction: column-reverse;
+  }
+  .column {
+    height: 50%;
+    text-align: center;
+  }
+
+  .stats {
+    padding-top: rem;
+    width: 100%;
+  }
+  p {
+    margin: 0 auto;
+  }
+
+  .intro {
+    letter-spacing: 0;
+    width: 100%;
+  }
+  .row {
+    padding-bottom: 2rem;
+  }
+  .left-column {
+    padding: 2rem;
+  }
+}
